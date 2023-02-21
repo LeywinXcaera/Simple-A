@@ -1,0 +1,62 @@
+import random
+a = ['rock', 'paper', 'scissor']
+p_score = 0
+bot_score = 0
+
+while p_score < 3 and bot_score <3:
+	p_move = input('Choose from rock, paper,scissor (lower case only): ')
+	bot_move = random.choice(a)
+	print('Player Move: ', p_move)
+	print('Bot Move: ' , bot_move)
+	
+	
+	if p_move == bot_move:
+		print('you both choose the same')
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+	elif p_move == 'rock' and bot_move ==        'paper':
+		print('bot wins')
+		bot_score += 1
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+		
+	elif p_move == 'rock' and bot_move == 'scissor':
+		print('you win')
+		p_score += 1
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+	elif p_move == 'paper' and bot_move ==      'rock':
+		print('you win')
+		p_score += 1
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+		
+	elif p_move == 'paper' and bot_move == 'scissor':
+		print('bot wins')
+		bot_score += 1
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+		
+	elif p_move == 'scissor' and bot_move        == 'rock':
+		print('bot wins')
+		bot_score += 1
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+		
+	elif p_move == 'scissor' and bot_move        == 'paper':
+		print('you win')
+		p_score += 1
+		print('player score: ', p_score)
+		print('bot score: ', bot_score)
+		
+	else:
+		print('invalid input')
+
+if p_score > bot_score:
+	print('you win')
+	print('player score',p_score)
+	print ('bot score',bot_score)
+else:
+	print('you lose')
+	print('player score: ',p_score)
+	print('bot score: ',bot_score)
